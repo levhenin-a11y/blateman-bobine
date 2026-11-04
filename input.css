@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme static {
+  /* White family */
+  --color-white-50: rgb(255 255 255);
+  --color-white-100: rgb(248 252 251);
+  --color-white-200: rgb(240 249 247);
+
+  /* Teal family (rgb(21 176 158)) */
+  --color-teal-50: rgb(236 252 249);
+  --color-teal-100: rgb(204 246 240);
+  --color-teal-200: rgb(153 235 224);
+  --color-teal-300: rgb(102 223 209);
+  --color-teal-400: rgb(60 198 181);
+  --color-teal-500: rgb(21 176 158);
+  --color-teal-600: rgb(16 148 132);
+  --color-teal-700: rgb(12 118 105);
+  --color-teal-800: rgb(8 88 79);
+  --color-teal-900: rgb(5 58 52);
+
+  /* Alt family (rgb(36 112 172)) */
+  --color-teal-alt-50: rgb(236 244 251);
+  --color-teal-alt-100: rgb(208 226 242);
+  --color-teal-alt-200: rgb(169 201 227);
+  --color-teal-alt-300: rgb(131 176 212);
+  --color-teal-alt-400: rgb(83 143 191);
+  --color-teal-alt-500: rgb(36 112 172);
+  --color-teal-alt-600: rgb(29 95 147);
+  --color-teal-alt-700: rgb(22 77 121);
+  --color-teal-alt-800: rgb(15 59 95);
+  --color-teal-alt-900: rgb(9 41 69);
+
+  /* Accent */
+  --color-accent: rgb(36 112 172);
+}

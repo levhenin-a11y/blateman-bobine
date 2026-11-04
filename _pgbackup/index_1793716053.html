@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blateman & Bobine - la BD des Super-Zéros</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body class="bg-white-200 w-full">
+        <header>
+            <div class="header-container mb-8">
+                <h1 class="text-6xl font-bold hidden">Blateman & Bobine - la BD des Super-Zéros</h1>
+                <a class="logo" href="#" title="Back to Home"><img src="./img/logo-site.png" alt="Blateman & Bobine Logo" class="w-64 h-64 mx-auto block"></a>
+            </div>
+            <div class="social-media">
+                <h2 class="text-4xl font-extrabold mb-4 hidden">Social Media</h2>
+                <div class="social-icons flex space-x-4 mb-4 mx-auto justify-center">
+                    <!---- TWITTER ICON  --->
+                    <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 
+                9.341-9.334 0-.14 0-.282-.006-.422A6.685 
+                6.685 0 0 0 16 3.542a6.658 6.658 0 0 
+                1-1.889.518 3.301 3.301 0 0 0 1.447-1.817
+                6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 
+                0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 
+                3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 
+                0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 
+                2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 
+                3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 
+                2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 
+                0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                    </svg>
+                    <!----  GOOGLE ICON  --->
+                    <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                        <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 
+                1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 
+                15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 
+                0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 
+                0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 
+                4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 
+                4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003
+                a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                    </svg>
+                    <!---- YOUTUBE ICON  --->
+                    <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 
+                6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172
+                .883.22 1.402l.01.104.022.26.008.104c.065.914.073
+                1.77.074 1.957v.075c-.001.194-.01 1.108-.082 
+                2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 
+                1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312
+                -5.569.334-6.18.335h-.142c-.309 0-1.587-.006
+                -2.927-.052l-.17-.006-.087-.004-.171-.007-.171
+                -.007c-1.11-.049 -2.167-.128-2.654-.26a2.007 
+                2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986
+                -.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 
+                1 0 7.68v-.123c.002-.215.01-.958.064-1.778l
+                .007-.103.003-.052.008-.104.022-.26.01-.104c
+                .048-.519.119-1.023.22-1.402a2.007 2.007 0 0 
+                1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17
+                -.007.172-.006.086-.003.171-.007A99.788 99.788 
+                0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157
+                -2.408L6.4 5.209z"/>
+                    </svg>
+                </div>
+                <!-- END of SOCIAL ICONS -->
+            </div>
+            <div>
+                <nav id="top-menu" class="bg-teal-alt-500 text-white mb-8 p-4 px-0">
+                    <div class="px-4 md:px-0">
+                        <div class="flex justify-center md:hidden">
+                            <button id="top-menu-toggle" type="button" class="inline-flex items-center gap-2 rounded border border-white px-3 py-2 text-white" aria-controls="top-menu-list" aria-expanded="false">
+                                <span>Menu</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul id="top-menu-list" class="hidden flex-col gap-3 pt-4 text-center md:flex md:flex-row md:justify-center md:space-x-4 md:pt-0">
+                            <li>
+                                <a href="#news">News</a>
+                            </li>
+                            <li>
+                                <a href="#personnages">Les Personnages</a>
+                            </li>
+                            <li>
+                                <a href="#serie">La Série</a>
+                            </li>
+                            <li>
+                                <a href="#albums">Les Albums</a>
+                            </li>
+                            <li>
+                                <a href="#auteurs">Les Auteurs</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#goodies">Goodies</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pg-empty-placeholder"></div>
+                </nav>
+            </div>
+        </header>
+        <!--START of NEWS-->
+        <section id="news" class="container mx-auto p-8 pb-32 mt-14 relative">
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">News</h2>
+            <div class="facebook-posts-container">
+                <div class="facebook-posts-grid grid grid-cols-1 gap-4 md:grid-cols-3">
+                    <div class="facebook-posts-item facebook-post-item-first">
+                        <div class="facebook-post-frame">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid05CqzChrvTPqfqAhXai4Q9mzQ5RvHK2N98BqgijqpSRtqjCvum25CafeRgyBFXo8el&show_text=true&width=500" width="500" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Publication Facebook Vincent Henin 1"></iframe>
+                        </div>
+                    </div>
+                    <div class="facebook-posts-item facebook-post-item-second">
+                        <div class="facebook-post-frame">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid0Cbiok3ro7ZpcKLoE72uKa74sWHVDXPQpLcCNAvqaHvLh68rkSJgYLSUpyPJTf5TTl&show_text=true&width=500" width="500" height="539" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                    </div>
+                    <div class="facebook-post-item facebook-post-item-third">
+                        <div class="facebook-post-frame">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid02pCf6WdyUBZn36qfGmrgAUeyAjAqRW6FWhYERekxKgukxSbGcJFjXBeJ47wcBatbYl&show_text=true&width=500" width="500" height="520" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Publication Facebook Vincent Henin 3"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- La bordure qui prend 100% de la largeur de l'écran -->
+            <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
+        </section>
+        <!--END of NEWS-->
+        <!--START of PERSONNAGES-->
+        <section id="personnages" class="container mx-auto p-8 pb-32 mt-14 relative">
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Les Personnages</h2>
+            <!--START of INTRODUCTION DES PERSONNAGES et TESTIMONIALS-->
+            <div class="personnages-introduction">
+                <div class="personnages-introduction-hello mb-4">
+                    Hello,I’m Blateman! Je suis le cousin de Batman. Le vrai. Ce dernier a fait bien des efforts pour cacher mon existence! Mais en vain, grâce au dessinateur Vhenin et au scénariste Tarek, je sors de l’ombre… pour le meilleur et pour le rire! Suis mes aventures, tu ne le regretteras pas…
+</div>                 
+                <!-- END of personnages-introduction-hello -->
+                <div class="personnages-introduction-testimony text-white-100 mb-4 bg-teal-500 p-4 rounded">
+                    "Blateman est un personnage hilarant et unique. Ses aventures sont toujours pleines de surprises et de rires. Je recommande vivement de suivre ses péripéties!" - Un fan enthousiaste
+</div>                 
+                <!-- END of personnages-introduction-testimony -->
+            </div>
+            <!--END of INTRODUCTION DES PERSONNAGES et TESTIMONIALS-->
+            <!--START of PRESENTATION DES PERSONNAGES-->
+            <div class="personnages-presentation">
+                <!--BLOCK 1 BLATEMAN-->
+                <div class="personnages-presentation-block--1">
+                    <div class="personnages-presentation-title">
+                        <h3 class="personnages-presentation-heading text-2xl font-bold text-teal-alt-500">Blateman</h3>
+                        <img class="h-48 w-48" src="img/cercle-persos.png" alt="Blateman">
+                    </div>
+                    <div class="personnages-presentation-signaletique">
+                        <h4 class="text-lg font-bold text-teal-alt-400">Fiche Signalétique</h4>
+                        <ul>
+                            <li>Cousin de Batman</li>
+                            <li>Héros comique</li>
+                            <li>Aventures hilarantes</li>
+                        </ul>
+                    </div>
+                    <div class="personnages-presentation-description">
+                        <p>Blateman est à l’aventure ce que Batman est à la chauve-souris… Euh, comprenez-y ce que vous voudrez. Blateman est un super-héros qui flirte souvent avec le super-zéro! Malgré ses pouvoirs extraordinaires et les tours qu’il cache dans ses Blat-Sacoches, il doit souvent compter sur son assistant, Bobine, pour rattraper ses bévues. 
+                            C’est qu’elle a 4 mains gauches, la pauvre blatte de compet’… </p>
+                    </div>
+                </div>
+                <!--END of BLOCK 1 BLATEMAN-->                 
+                <!--BLOCK 2 BOBINE-->                 
+                <div class="personnages-presentation-block--2">
+                    <div class="personnages-presentation-title">
+                        <h3 class="personnages-presentation-heading text-2xl font-bold text-teal-alt-500">Bobine</h3>
+                        <img class="h-48 w-48" src="img/cercle-persos.png" alt="Blateman">
+                    </div>
+                    <div class="personnages-presentation-signaletique">
+                        <h4 class="text-lg font-bold text-teal-alt-400">Fiche Signalétique</h4>
+                        <ul>
+                            <li>Gamin aux dents jaunes</li>
+                            <li>Nom civil : Bobine</li>
+                            <li>Etc.</li>
+                        </ul>
+                    </div>
+                    <div class="personnages-presentation-description">
+                        <p>Bobine, lui, est un gamin aux cheveux jaunes et à la dentition imposante. Pas une belle gueule donc, pour une Bobine! Mais il est futé, parfois un brin roublard, et surtout débrouillard et perspicace.Sa motivation est sans bornes; c’est auprès de Blateman, son maître de stage, qu’il compte apprendre les ficelles du métier de super-héros… À moins que ce ne soit le contraire, Bobine qui apprend à Blateman ?! Le disciple peut parfois dépasser le maître ! 
+                            Le tandem « B & B », c’est de la dynamite et c’est la combinaison parfaite pour vous faire vivre de folles aventures, rire et voyager, au gré de leurs péripéties hautes en couleur.  </p>
+                    </div>
+                </div>
+                <!--END of BLOCK 2 BOBINE-->                 
+            </div>
+            <!--END of PRESENTATION DES PERSONNAGES-->
+            <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
+        </section>
+        <!--END of PERSONNAGES-->
+        <!--START of SERIE-->
+        <section id="serie" class="container mx-auto p-8 pb-32 mt-14 relative">
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">La Série</h2>
+            <div class="serie-intro">
+                <img class="serie-intro-img" src="http://pinegrow.com/placeholders/img19.jpg"/>
+                <div class="serie-intro-text">
+                    <p>« Blateman & Bobine » est une série de Bandes Dessinées jeunesse (7-14 ans) publiées aux éditions ABA Academy. 
+                        C’est l’histoire de deux super héros peu ordinaires… </p>
+                    <p>L’un est le cousin de Batman (enfin, c’est ce qu’il prétend…) et l’autre, Bobine, un stagiaire, garçon intelligent et 
+                        courageux rêvant de devenir un vrai super-héro en suivant son maître de stage, Blateman. </p>
+                </div>
+                <video width="320" height="240" controls>
+                    <source src="./img/cercle-persos.png" type="video/mp4">
+                    <source src="./img/cercle-persos.png" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="serie-text">
+                <p>Nous avons été bercés avec les histoires des Super-Héros… pourtant, très peu d’entre elles nous racontaient les péripéties de Blateman 
+                        et son acolyte-assistant, Bobine. Il est vrai que dans le chef de Blateman, blatte de compet’ à quatre mains, on penche plutôt du côté du Super-Zéro… ! Qu’à cela ne tienne, cela nous procure des aventures où bêtises rivalisent avec expertise et où humour rime avec bravoure. </p>
+                <p>Dans un style de dessin et des couleurs pop art uniques en son genre, la série « Blateman & Bobine » ravira les petits 
+                        et les grands par son rythme et son humour, parfois décalé, mais habilement disséminé au gré des pages. </p>
+                <p>La lire, c’est l’adopter pour toujours :-)</p>
+            </div>
+            <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
+        </section>
+        <!-- END of SERIE-->
+        <!-- START of ALBUMS-->
+        <section id="albums" class="container mx-auto p-8 pb-32 mt-14 relative">
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Les Albums</h2>
+            <div class="albums-container grid grid-cols-1 gap-6 justify-items-center md:grid-cols-3 md:gap-8">
+                <div class="albums-cover flex flex-col items-center">
+                    <a href="#"> <img class="albums-cover-img border-2 border-white-200 border-solid rounded-md" src="https://via.placeholder.com/210x279/orange/whitesmoke.jpg?text=Album+1+Zombie-Attack!"/> </a>
+                    <a href="#"> <caption>Album 1: Zombie-Attack!</caption> </a>
+                </div>
+                <div class="albums-cover flex flex-col items-center">
+                    <a href="#"> <img class="albums-cover-img border-2 border-white-200 border-solid rounded-md" src="https://via.placeholder.com/210x279/red/whitesmoke.jpg?text=Album+2+Gouda+City"/> </a>
+                    <a href="#"> <caption>Album 2: Gouda City</caption> </a>
+                </div>
+                <div class="albums-cover flex flex-col items-center">
+                    <a href="#"> <img class="albums-cover-img border-2 border-white-200 border-solid rounded-md" src="https://via.placeholder.com/210x279/666fff/whitesmoke.jpg?text=Album+3+Holiday"/> </a>
+                    <a href="#"> <caption>Album 3: Holiday</caption> </a>
+                </div>
+            </div>
+            <div class="albums-order">
+                <h2>Heading 2</h2>
+            </div>
+            <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
+        </section>
+        <!-- END of ALBUMS -->
+        <!-- START of AUTEURS-->
+        <section id="auteurs" class="container mx-auto p-8 pb-32 mt-14 relative">
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Les Auteurs</h2>
+            <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
+        </section>
+        <!-- END of AUTEURS -->
+        <!-- START of CONTACT-->
+        <section id="contact" class="container mx-auto p-8 pb-32 mt-14 relative">
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Contact</h2>
+            <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
+        </section>
+        <!-- END of CONTACT -->
+        <!-- START of GOODIES-->
+        <section id="goodies" class="container mx-auto p-8 pb-32 mt-14 relative">
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Goodies</h2>
+            <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
+        </section>
+        <footer>
+</footer>
+        <!-- END of GOODIES -->
+        <script>
+            const topMenuToggle = document.getElementById('top-menu-toggle');
+            const topMenuList = document.getElementById('top-menu-list');
+
+            if (topMenuToggle && topMenuList) {
+                topMenuToggle.addEventListener('click', () => {
+                    const isExpanded = topMenuToggle.getAttribute('aria-expanded') === 'true';
+                    topMenuToggle.setAttribute('aria-expanded', String(!isExpanded));
+                    topMenuList.classList.toggle('hidden');
+                });
+            }
+        </script>
+    </body>
+</html>
