@@ -76,7 +76,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <ul id="top-menu-list" class="hidden flex-col gap-3 pt-4 text-center md:flex md:flex-row md:justify-center md:space-x-4 md:pt-0">
+                        <ul id="top-menu-list" class="hidden flex-col pt-4 space-y-6 text-center md:flex md:flex-row md:justify-center md:space-x-6 md:pt-0 md:space-y-0">
                             <li>
                                 <a href="#news">News</a>
                             </li>
@@ -395,14 +395,14 @@
         </section>
         <!-- END of GOODIES -->
         <!-- START of FOOTER-->
-        <footer class="footer bg-teal-alt-500 text-white py-8">
-            <div class="footer-container flex flex-col md:flex-row gap-4">
+        <footer class="footer bg-teal-alt-500 text-white py-4 md:px-6">
+            <div class="footer-container flex flex-col md:flex-row gap-4 items-center text-center md:justify-around">
                 <div class="footer-logo">
                     <h1 class="text-6xl font-bold hidden">Blateman & Bobine - la BD des Super-Zéros</h1>
                     <a href="#" title="Back to Home"><img src="./img/logo-site.png" alt="Blateman & Bobine Logo" class="footer-logo-image w-32 h-32 mx-auto block"></a>
                 </div>
                 <div class="footer-links">
-                    <ul id="footer-links-items" class="flex flex-col md:flex-row gap-4">
+                    <ul id="footer-links-items" class="flex flex-col md:flex-row gap-4 mb-6 md:mb-0 md:space-x-6">
                         <li>
                             <a href="#news">News</a>
                         </li>
@@ -428,7 +428,7 @@
                 </div>
                 <div class="footer-social-media">
                     <h2 class="text-4xl font-extrabold mb-4 hidden">Social Media</h2>
-                    <div class="footer-social-icons flex space-x-4 mb-4 mx-auto justify-center">
+                    <div class="footer-social-icons flex space-x-4 mb-6 mx-auto justify-center">
                         <!---- TWITTER ICON  --->
                         <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
                             <path d="M5.026 15c6.038 0 9.341-5.003 
@@ -482,7 +482,7 @@
                 <!--END DIV FOOTER-SOCIAL-MEDIA-->
             </div>
             <!--END DIV FOOTER-CONTAINER-->
-            <div class="copyright text-center">Copyright © Vhenin - Blateman & Bobine</div>
+            <div class="copyright text-center text-sm">Copyright © Vhenin - Blateman & Bobine 2024-</div>
         </footer>
         <!-- END of GOODIES-->
         <script>
@@ -490,7 +490,7 @@
 
             if (copyrightElement) {
                 const baseText = copyrightElement.textContent ? copyrightElement.textContent.replace(/\s+\d{4}$/, '') : '';
-                copyrightElement.textContent = `${baseText} ${new Date().getFullYear()}`;
+                copyrightElement.textContent = `${baseText}${new Date().getFullYear()}`;
             }
 
             const topMenuToggle = document.getElementById('top-menu-toggle');
