@@ -294,7 +294,7 @@
                 <article>
                     <h3 class="text-2xl font-bold text-teal-alt-500">Vhenin</h3>
                     <p class="mt-1 text-xl font-bold uppercase italic">Dessinateur - Scénariste - Coloriste</p>
-                    <p class="mt-5 text-lg"><a href="mailto:levhenin@gmail.com"></ahref>levhenin@gmail.com<br><a class="underline decoration-1 underline-offset-2" href="https://www.vhenin.be" target="_blank" rel="noopener noreferrer">www.vhenin.be</a></p>
+                    <p class="mt-5 text-lg"><a href="mailtolevhenin@gmail.com">levhenin@gmail.com</a><br><a class="underline decoration-1 underline-offset-2" href="https://www.vhenin.be" target="_blank" rel="noopener noreferrer">www.vhenin.be</a></p>
                 </article>
                 <article>
                     <h3 class="text-2xl font-bold text-teal-alt-500">Tarek</h3>
@@ -307,15 +307,21 @@
                     <form class="md:col-span-8" action="#" method="post">
                         <div class="space-y-5">
                             <div>
-                                <label for="contact-name" class="mb-2 block text-xl font-bold uppercase italic text-white">Nom et prénom <span class="text-teal-alt-100" aria-hidden="true">*</span></label>
+                                <label for="contact-name" class="mb-2 block text-xl font-bold uppercase italic text-white">Nom et prénom 
+                                    <span class="text-teal-alt-100" aria-hidden="true">*</span>
+                                </label>
                                 <input id="contact-name" name="name" type="text" required class="h-14 w-full border border-teal-100 px-3 text-xl text-teal-900 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50">
                             </div>
                             <div>
-                                <label for="contact-email" class="mb-2 block text-xl font-bold uppercase italic text-white">Adresse mail <span class="text-teal-alt-100" aria-hidden="true">*</span></label>
+                                <label for="contact-email" class="mb-2 block text-xl font-bold uppercase italic text-white">Adresse mail 
+                                    <span class="text-teal-alt-100" aria-hidden="true">*</span>
+                                </label>
                                 <input id="contact-email" name="email" type="email" required class="h-14 w-full border border-teal-100 px-3 text-xl text-black focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50">
                             </div>
                             <div>
-                                <label for="contact-message" class="mb-2 block text-xl font-bold uppercase italic text-white">Message <span class="text-teal-alt-100" aria-hidden="true">*</span></label>
+                                <label for="contact-message" class="mb-2 block text-xl font-bold uppercase italic text-white">Message 
+                                    <span class="text-teal-alt-100" aria-hidden="true">*</span>
+                                </label>
                                 <textarea id="contact-message" name="message" rows="6" required class="w-full border border-teal-100 px-3 py-2 text-xl text-black focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50" placeholder="..."></textarea>
                             </div>
                         </div>
@@ -339,11 +345,54 @@
         <!-- START of GOODIES-->
         <section id="goodies" class="container mx-auto p-8 pb-32 mt-14 relative">
             <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Goodies</h2>
+            <h3 class="text-2xl font-bold text-teal-alt-500">Goodies Item 1</h3>
+            <div class="goodies-container flex gap-2.5 justify-start flex-col md:flex-row">
+                <div class="goodies-item flex flex-col items-center">
+                    <figure class="flex flex-col items-center">
+                        <img src="./img/cercle-persos.png" alt="Goodie 1" class="goodies-image h-60 w-full object-cover">
+                        <figcaption class="">Description of Goodie 1.</figcaption>
+                    </figure>
+                </div>
+                <figure class="flex flex-col items-center">
+                    <img src="http://pinegrow.com/placeholders/img19.jpg" alt="Goodie 2" class="goodies-image h-60 w-full object-cover">
+                    <figcaption class="">Description of Goodie 2.</figcaption>
+                </figure>
+                <div class="goodies-item flex flex-col items-center">
+                    <figure class="flex flex-col items-center">
+                        <img src="http://pinegrow.com/placeholders/img11.jpg" alt="Goodie 3" class="goodies-image h-60 w-full object-cover">
+                        <figcaption class="">Description of Goodie 3.</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-teal-alt-500">Goodies Item 2</h3>
+            <div class="goodies-container flex gap-1.5 justify-start flex-col md:flex-row">
+                <div class="goodies-item flex flex-col items-center">
+                    <figure class="flex flex-col items-center">
+                        <img src="./img/cover_A4.jpg" alt="Goodie 4" class="goodies-image h-60 w-full object-cover">
+                        <figcaption class="text-lg tex-bold text-red">Description of Goodie 4.</figcaption>
+                    </figure>
+                </div>
+                <div class="goodies-item flex flex-col items-center">
+                    <figure class="flex flex-col items-center">
+                        <img src="https://via.placeholder.com/500x290/45ab12/111111.jpg?text=Buy my latest product" alt="Goodie 5" class="goodies-image h-60 w-full object-cover rounded-full">
+                        <figcaption class="">Description of Goodie 5.</figcaption>
+                    </figure>
+                </div>
+                <div class="goodies-item flex flex-col items-center">
+                    <figure class="flex flex-col items-center">
+                        <img src="https://via.placeholder.com/420x300/c7c5b2/111111.jpg?text=Good Goodies" alt="Goodie 6" class="goodies-image h-60 w-full object-cover rounded-full">
+                        <figcaption class="">Description of Goodie 6.</figcaption>
+                    </figure>
+                </div>
+            </div>
             <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
         </section>
-        <footer>
-</footer>
         <!-- END of GOODIES -->
+        <!-- START of FOOTER-->
+        <footer>
+            FOOTER ff
+</footer>
+        <!-- END of GOODIES-->
         <script>
             const topMenuToggle = document.getElementById('top-menu-toggle');
             const topMenuList = document.getElementById('top-menu-list');

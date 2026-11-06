@@ -224,42 +224,175 @@
             <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Les Albums</h2>
             <div class="albums-container grid grid-cols-1 gap-6 justify-items-center md:grid-cols-3 md:gap-8">
                 <div class="albums-cover flex flex-col items-center">
-                    <a href="#"> <img class="albums-cover-img border-2 border-white-200 border-solid rounded-md" src="https://via.placeholder.com/210x279/orange/whitesmoke.jpg?text=Album+1+Zombie-Attack!"/> </a>
+                    <a href="#"> <img class="albums-cover-img border-2 border-white-200 border-solid rounded-md shadow-sm" src="https://via.placeholder.com/210x279/orange/whitesmoke.jpg?text=Album+1+Zombie-Attack!"/> </a>
                     <a href="#"> <caption>Album 1: Zombie-Attack!</caption> </a>
                 </div>
                 <div class="albums-cover flex flex-col items-center">
-                    <a href="#"> <img class="albums-cover-img border-2 border-white-200 border-solid rounded-md" src="https://via.placeholder.com/210x279/red/whitesmoke.jpg?text=Album+2+Gouda+City"/> </a>
+                    <a href="#"> <img class="albums-cover-img border-2 border-white-200 border-solid rounded-md shadow-sm" src="https://via.placeholder.com/210x279/red/whitesmoke.jpg?text=Album+2+Gouda+City"/> </a>
                     <a href="#"> <caption>Album 2: Gouda City</caption> </a>
                 </div>
                 <div class="albums-cover flex flex-col items-center">
-                    <a href="#"> <img class="albums-cover-img border-2 border-white-200 border-solid rounded-md" src="https://via.placeholder.com/210x279/666fff/whitesmoke.jpg?text=Album+3+Holiday"/> </a>
+                    <a href="#"> <img class="albums-cover-img border-2 border-white-200 border-solid rounded-md shadow-sm" src="https://via.placeholder.com/210x279/666fff/whitesmoke.jpg?text=Album+3+Holiday"/> </a>
                     <a href="#"> <caption>Album 3: Holiday</caption> </a>
                 </div>
             </div>
-            <div class="albums-order"></div>
+            <div class="albums-order-container">
+                <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Commande</h2>
+                <div class="albums-order-cta h-auto bg-teal-600 rounded-lg p-4">
+                    <h3 class="albums-order-cta-heading text-2xl font-bold text-white-100">Tu veux un album?</h3>
+                    <p class="albums-order-cta-text text-white">Rends-toi dans le section <a href="#" class="underline">Contact</a> et dis-nous le ou les albums que tu souhaites commander. On te répondra dans les plus brefs délais.<br><br>Et bien sûr, on t'envoie les albums commandés gratuitement.<br><br>Merci !</p>
+                </div>
+            </div>
             <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
         </section>
         <!-- END of ALBUMS -->
         <!-- START of AUTEURS-->
         <section id="auteurs" class="container mx-auto p-8 pb-32 mt-14 relative">
             <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Les Auteurs</h2>
+            <div class="space-y-14 pt-6">
+                <article class="grid grid-cols-1 items-center gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-5">
+                        <img class="h-auto w-full max-w-105 rounded-md border-2 border-white-200 shadow-sm" src="https://via.placeholder.com/420x300/c7c5b2/111111.jpg?text=Photo+Dessinateur" alt="Photo du dessinateur Vhenin">
+                    </div>
+                    <div class="md:col-span-7">
+                        <h3 class="text-2xl font-bold text-teal-alt-500">Vhenin</h3>
+                        <p class="mt-1 text-xl font-bold uppercase italic">Dessinateur- Scenariste - coloriste</p>
+                        <a href="#" data-bio-toggle="bio-vhenin" aria-controls="bio-vhenin" aria-expanded="false" class="mt-4 inline-flex items-center gap-2 text-xl"><span class="underline decoration-1 underline-offset-2">Clique ici pour la biographie complète de Vhenin </span><span data-bio-indicator class="text-teal-alt-200 no-underline">▲</span></a>
+                        <div id="bio-vhenin" class="mt-4 hidden rounded-lg border border-white-200 bg-white p-4 text-lg">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in varius elit. Aenean varius suscipit massa, vel ultrices justo feugiat vitae. Integer luctus sem et blandit tristique. Phasellus consequat suscipit lorem, id gravida ipsum tincidunt vel. Donec vel turpis velit.</p>
+                            <p class="mt-2">Curabitur non posuere nisl, eget luctus justo. Praesent consequat ante nec urna ullamcorper, non tristique arcu viverra. Sed pellentesque nibh et velit volutpat, sit amet pretium turpis volutpat. Aliquam non lectus lacinia, pulvinar ipsum non, aliquet sem.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="grid grid-cols-1 items-center gap-8 md:grid-cols-12 md:gap-10">
+                    <div class="md:col-span-7">
+                        <h3 class="text-2xl font-bold text-teal-alt-500">Tarek</h3>
+                        <p class="mt-1 text-xl font-bold uppercase italic">Scénariste</p>
+                        <a href="#" data-bio-toggle="bio-tarek" aria-controls="bio-tarek" aria-expanded="false" class="mt-4 inline-flex items-center gap-2 text-xl"><span class="underline decoration-1 underline-offset-2">Clique ici pour la biographie complète de Tarek </span><span data-bio-indicator class="text-teal-alt-200 no-underline">▲</span></a>
+                        <div id="bio-tarek" class="mt-4 hidden rounded-lg border border-white-200 bg-white p-4 text-lg">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper, justo at molestie feugiat, velit ligula elementum lorem, sed eleifend justo nisi eget nibh. Sed vitae purus luctus, tempor lectus ac, iaculis risus. Morbi finibus mauris sed justo pellentesque volutpat.</p>
+                            <p class="mt-2">Suspendisse potenti. Pellentesque at finibus elit. Morbi volutpat facilisis neque sed ultrices. Etiam pellentesque efficitur neque non egestas. Aenean euismod arcu quis ante ultricies, vitae posuere lorem ullamcorper. Vestibulum eu justo vel sapien aliquam ullamcorper.</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-5 md:justify-self-end">
+                        <img class="h-auto w-full max-w-105 rounded-md border-2 border-white-200 shadow-sm" src="https://via.placeholder.com/420x300/c7c5b2/111111.jpg?text=Photo+Scenariste" alt="Photo du scénariste Tarek">
+                    </div>
+                </article>
+            </div>
             <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
         </section>
         <!-- END of AUTEURS -->
         <!-- START of CONTACT-->
         <section id="contact" class="container mx-auto p-8 pb-32 mt-14 relative">
             <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Contact</h2>
+            <div class="grid grid-cols-1 gap-8 pt-6 md:grid-cols-3 md:gap-10">
+                <article>
+                    <h3 class="text-2xl font-bold text-teal-alt-500">Olivier Ghys</h3>
+                    <p class="mt-1 text-xl font-bold uppercase italic">Éditeur</p>
+                    <p class="mt-5 text-lg">email adresse<br>+32 497 12 34 56</p>
+                </article>
+                <article>
+                    <h3 class="text-2xl font-bold text-teal-alt-500">Vhenin</h3>
+                    <p class="mt-1 text-xl font-bold uppercase italic">Dessinateur - Scénariste - Coloriste</p>
+                    <p class="mt-5 text-lg"><a href="mailtolevhenin@gmail.com">levhenin@gmail.com</a><br><a class="underline decoration-1 underline-offset-2" href="https://www.vhenin.be" target="_blank" rel="noopener noreferrer">www.vhenin.be</a></p>
+                </article>
+                <article>
+                    <h3 class="text-2xl font-bold text-teal-alt-500">Tarek</h3>
+                    <p class="mt-1 text-xl font-bold uppercase italic">Scénariste</p>
+                    <p class="mt-5 text-lg"><a href="https://tarek-bd.fr/contact/" target="_blank" rel="noopener noreferrer">https://tarek-bd.fr/contact/</a><br><a class="underline decoration-1 underline-offset-2" href="https://tarek-bd.fr/" target="_blank" rel="noopener noreferrer">www.tarek-bd.fr</a></p>
+                </article>
+            </div>
+            <div class="mt-10 rounded-[1.75rem] bg-teal-600 p-5 md:p-8">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-12">
+                    <form class="md:col-span-8" action="#" method="post">
+                        <div class="space-y-5">
+                            <div>
+                                <label for="contact-name" class="mb-2 block text-xl font-bold uppercase italic text-white">Nom et prénom 
+                                    <span class="text-teal-alt-100" aria-hidden="true">*</span>
+                                </label>
+                                <input id="contact-name" name="name" type="text" required class="h-14 w-full border border-teal-100 px-3 text-xl text-teal-900 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="mb-2 block text-xl font-bold uppercase italic text-white">Adresse mail 
+                                    <span class="text-teal-alt-100" aria-hidden="true">*</span>
+                                </label>
+                                <input id="contact-email" name="email" type="email" required class="h-14 w-full border border-teal-100 px-3 text-xl text-black focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50">
+                            </div>
+                            <div>
+                                <label for="contact-message" class="mb-2 block text-xl font-bold uppercase italic text-white">Message 
+                                    <span class="text-teal-alt-100" aria-hidden="true">*</span>
+                                </label>
+                                <textarea id="contact-message" name="message" rows="6" required class="w-full border border-teal-100 px-3 py-2 text-xl text-black focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50" placeholder="..."></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex flex-wrap justify-end gap-4">
+                            <button type="reset" class="min-w-32 rounded-lg border border-white px-6 py-3 text-2xl text-white transition hover:bg-white hover:text-teal-alt-500">Annuler</button>
+                            <button type="submit" class="min-w-32 rounded-lg bg-white px-6 py-3 text-2xl text-teal-600 shadow-md transition hover:bg-white-100">Envoyer</button>
+                        </div>
+                    </form>
+                    <div class="hidden items-center justify-center md:col-span-4 md:flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-64 w-64 text-teal-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.75 6.75h14.5c.966 0 1.75.784 1.75 1.75v7.5c0 .966-.784 1.75-1.75 1.75H4.75A1.75 1.75 0 0 1 3 16V8.5c0-.966.784-1.75 1.75-1.75Z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m3.5 7.5 8.5 7 8.5-7"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2 10.5h2.5M2 13.5h3.5"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
             <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
         </section>
         <!-- END of CONTACT -->
         <!-- START of GOODIES-->
         <section id="goodies" class="container mx-auto p-8 pb-32 mt-14 relative">
             <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Goodies</h2>
+            <h3 class="text-2xl font-bold text-teal-alt-500">Goodies Item 1</h3>
+            <div class="goodies-container flex gap-2.5 justify-start flex-col md:flex-row">
+                <div class="goodies-item flex flex-col items-center">
+                    <figure class="flex flex-col items-center">
+                        <img src="./img/cercle-persos.png" alt="Goodie 1" class="goodies-image h-60 w-full object-cover">
+                        <figcaption class="">Description of Goodie 1.</figcaption>
+                    </figure>
+                </div>
+                    <figure class="flex flex-col items-center">
+                        <img src="http://pinegrow.com/placeholders/img19.jpg" alt="Goodie 2" class="goodies-image h-60 w-full object-cover">
+                        <figcaption class="">Description of Goodie 2.</figcaption>
+                    </figure>
+                <div class="goodies-item flex flex-col items-center">
+                    <figure class="flex flex-col items-center">
+                        <img src="http://pinegrow.com/placeholders/img11.jpg" alt="Goodie 3" class="goodies-image h-60 w-full object-cover">
+                        <figcaption class="">Description of Goodie 3.</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-teal-alt-500">Goodies Item 2</h3>
+            <div class="goodies-container flex gap-1.5 justify-start flex-col md:flex-row">
+                <div class="goodies-item flex flex-col items-center">
+                    <figure class="flex flex-col items-center">
+                        <img src="./img/cover_A4.jpg" alt="Goodie 4" class="goodies-image h-60 w-full object-cover">
+                        <figcaption class="text-lg tex-bold text-red">Description of Goodie 4.</figcaption>
+                    </figure>
+                </div>
+                <div class="goodies-item flex flex-col items-center">
+                    <figure class="flex flex-col items-center">
+                        <img src="https://via.placeholder.com/500x290/45ab12/111111.jpg?text=Buy my latest product" alt="Goodie 5" class="goodies-image h-60 w-full object-cover">
+                        <figcaption class="">Description of Goodie 5.</figcaption>
+                    </figure>
+                </div>
+                <div class="goodies-item flex flex-col items-center">
+                    <figure class="flex flex-col items-center">
+                        <img src="https://via.placeholder.com/420x300/c7c5b2/111111.jpg?text=Good Goodies" alt="Goodie 6" class="goodies-image h-60 w-full object-cover rounded-full">
+                        <figcaption class="">Description of Goodie 6.</figcaption>
+                    </figure>
+                </div>
+            </div>
             <div class="absolute bottom-0 left-1/2 h-2 w-screen -translate-x-1/2 bg-teal-alt-300"></div>
         </section>
-        <footer>
-</footer>
         <!-- END of GOODIES -->
+        <!-- START of FOOTER-->
+        <footer>
+            FOOTER ff
+</footer>
+        <!-- END of GOODIES-->
         <script>
             const topMenuToggle = document.getElementById('top-menu-toggle');
             const topMenuList = document.getElementById('top-menu-list');
@@ -271,6 +404,40 @@
                     topMenuList.classList.toggle('hidden');
                 });
             }
+
+            const biographyToggles = document.querySelectorAll('[data-bio-toggle]');
+
+            const setBiographyState = (toggle, expanded) => {
+                const biographyId = toggle.getAttribute('data-bio-toggle');
+                const biographyPanel = biographyId ? document.getElementById(biographyId) : null;
+
+                if (!biographyPanel) {
+                    return;
+                }
+
+                toggle.setAttribute('aria-expanded', String(expanded));
+                biographyPanel.classList.toggle('hidden', !expanded);
+
+                const indicator = toggle.querySelector('[data-bio-indicator]');
+
+                if (indicator) {
+                    indicator.textContent = expanded ? '▼' : '▲';
+                }
+            };
+
+            biographyToggles.forEach((toggle) => {
+                toggle.addEventListener('click', (event) => {
+                    event.preventDefault();
+
+                    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+
+                    biographyToggles.forEach((item) => setBiographyState(item, false));
+
+                    if (!isExpanded) {
+                        setBiographyState(toggle, true);
+                    }
+                });
+            });
         </script>
     </body>
 </html>

@@ -8,6 +8,7 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-800: oklch(44.4% 0.177 26.899);
     --color-teal-50: rgb(236 252 249);
     --color-teal-100: rgb(204 246 240);
@@ -19,6 +20,7 @@
     --color-teal-700: rgb(12 118 105);
     --color-teal-800: rgb(8 88 79);
     --color-teal-900: rgb(5 58 52);
+    --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -298,6 +300,9 @@
   .h-14 {
     height: calc(var(--spacing) * 14);
   }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
+  }
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
@@ -310,14 +315,11 @@
   .h-auto {
     height: auto;
   }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
-  }
-  .w-3\.5 {
-    width: calc(var(--spacing) * 3.5);
-  }
   .w-5 {
     width: calc(var(--spacing) * 5);
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
   }
   .w-48 {
     width: calc(var(--spacing) * 48);
@@ -420,6 +422,9 @@
   .rounded-\[1\.75rem\] {
     border-radius: 1.75rem;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -446,6 +451,9 @@
   }
   .border-white-200 {
     border-color: var(--color-white-200);
+  }
+  .bg-gray-800 {
+    background-color: var(--color-gray-800);
   }
   .bg-teal-50 {
     background-color: var(--color-teal-50);
@@ -498,6 +506,9 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
@@ -540,9 +551,6 @@
   }
   .text-black {
     color: var(--color-black);
-  }
-  .text-red-800 {
-    color: var(--color-red-800);
   }
   .text-teal-500 {
     color: var(--color-teal-500);
