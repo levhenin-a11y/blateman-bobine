@@ -8,9 +8,7 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-100: oklch(96.2% 0.059 95.617);
-    --color-amber-500: oklch(76.9% 0.188 70.08);
-    --color-amber-600: oklch(66.6% 0.179 58.318);
+    --color-red-800: oklch(44.4% 0.177 26.899);
     --color-teal-50: rgb(236 252 249);
     --color-teal-100: rgb(204 246 240);
     --color-teal-200: rgb(153 235 224);
@@ -291,12 +289,6 @@
   .table {
     display: table;
   }
-  .h-1 {
-    height: var(--spacing);
-  }
-  .h-1\/2 {
-    height: calc(1 / 2 * 100%);
-  }
   .h-2 {
     height: calc(var(--spacing) * 2);
   }
@@ -317,15 +309,6 @@
   }
   .h-auto {
     height: auto;
-  }
-  .h-full {
-    height: 100%;
-  }
-  .w-1 {
-    width: var(--spacing);
-  }
-  .w-1\/2 {
-    width: calc(1 / 2 * 100%);
   }
   .w-3 {
     width: calc(var(--spacing) * 3);
@@ -380,9 +363,6 @@
   .items-center {
     align-items: center;
   }
-  .items-start {
-    align-items: flex-start;
-  }
   .justify-center {
     justify-content: center;
   }
@@ -418,9 +398,6 @@
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
-  }
-  .gap-45 {
-    gap: calc(var(--spacing) * 45);
   }
   :where(.space-y-5 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
@@ -470,15 +447,6 @@
   .border-white-200 {
     border-color: var(--color-white-200);
   }
-  .bg-amber-100 {
-    background-color: var(--color-amber-100);
-  }
-  .bg-amber-500 {
-    background-color: var(--color-amber-500);
-  }
-  .bg-amber-600 {
-    background-color: var(--color-amber-600);
-  }
   .bg-teal-50 {
     background-color: var(--color-teal-50);
   }
@@ -500,14 +468,8 @@
   .bg-white-200 {
     background-color: var(--color-white-200);
   }
-  .object-contain {
-    object-fit: contain;
-  }
   .object-cover {
     object-fit: cover;
-  }
-  .object-fill {
-    object-fit: fill;
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
@@ -578,6 +540,9 @@
   }
   .text-black {
     color: var(--color-black);
+  }
+  .text-red-800 {
+    color: var(--color-red-800);
   }
   .text-teal-500 {
     color: var(--color-teal-500);
