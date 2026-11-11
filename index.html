@@ -66,17 +66,18 @@
                 <!-- END of SOCIAL ICONS -->
             </div>
             <div>
-                <nav id="top-menu" class="bg-teal-alt-500 text-white mb-8 p-4 px-0">
-                    <div class="px-4 md:px-0">
-                        <div class="flex justify-center md:hidden">
-                            <button id="top-menu-toggle" type="button" class="inline-flex items-center gap-2 rounded border border-white px-3 py-2 text-white" aria-controls="top-menu-list" aria-expanded="false">
-                                <span>Menu</span>
+                <nav id="top-menu" class="bg-teal-alt-500 text-white mb-8 p-4 px-0 flex items-center npm">
+                    
+                    <div class="top-menu-links flex items-center justify-between gap-3 md:gap-6 p-4">
+                        <div class="top-menu-toggle-wrapper flex items-center md:hidden">
+                             <button id="top-menu-toggle" type="button" class="inline-flex items-center gap-2 rounded border border-white px-3 py-2 text-white" aria-controls="top-menu-list" aria-expanded="false">
+                                <span class="hidden">Menu</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
                                 </svg>
                             </button>
                         </div>
-                        <ul id="top-menu-list" class="hidden flex-col pt-4 space-y-6 text-center md:flex md:flex-row md:justify-center md:space-x-6 md:pt-0 md:space-y-0">
+                        <ul id="top-menu-list" class="hidden w-full flex-col pt-4 text-center md:flex md:w-auto md:flex-1 md:flex-row md:items-center md:justify-center md:space-x-6 md:pt-0 md:space-y-0">
                             <li>
                                 <a href="#news">News</a>
                             </li>
@@ -100,7 +101,17 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="pg-empty-placeholder"></div>
+                    <div class="language-switch ml-auto mr-4 flex shrink-0 items-center gap-1 rounded-full border border-white/30 bg-white/5 p-1 text-xs font-semibold uppercase tracking-[0.12em] text-white/80 md:text-[0.7rem]" aria-label="Choix de langue">
+                        <button type="button" class="lang-option rounded-full px-2.5 py-1.5 transition-all duration-200 hover:bg-white/10 data-[active=true]:bg-white data-[active=true]:text-teal-alt-500 data-[active=true]:shadow-sm" data-lang="fr" aria-pressed="true" aria-current="true" data-active="true">
+                                FR
+                        </button>
+                        <button type="button" class="lang-option rounded-full px-2.5 py-1.5 transition-all duration-200 hover:bg-white/10 data-[active=true]:bg-white data-[active=true]:text-teal-alt-500 data-[active=true]:shadow-sm" data-lang="nl" aria-pressed="false" data-active="false">
+                                NL
+                            </button>
+                        <button type="button" class="lang-option rounded-full px-2.5 py-1.5 transition-all duration-200 hover:bg-white/10 data-[active=true]:bg-white data-[active=true]:text-teal-alt-500 data-[active=true]:shadow-sm" data-lang="en" aria-pressed="false" data-active="false">
+                                EN
+                        </button>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -114,16 +125,16 @@
                             <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid05CqzChrvTPqfqAhXai4Q9mzQ5RvHK2N98BqgijqpSRtqjCvum25CafeRgyBFXo8el&show_text=true&width=500" width="500" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Publication Facebook Vincent Henin 1"></iframe>
                         </div>
                     </div>
-                    <div class="facebook-posts-item facebook-post-item-second">
+                    <!--<div class="facebook-posts-item facebook-post-item-second">
                         <div class="facebook-post-frame">
                             <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid0Cbiok3ro7ZpcKLoE72uKa74sWHVDXPQpLcCNAvqaHvLh68rkSJgYLSUpyPJTf5TTl&show_text=true&width=500" width="500" height="539" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                         </div>
-                    </div>
-                    <div class="facebook-post-item facebook-post-item-third">
+                    </div>-->
+                    <!--<div class="facebook-post-item facebook-post-item-third">
                         <div class="facebook-post-frame">
                             <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid02pCf6WdyUBZn36qfGmrgAUeyAjAqRW6FWhYERekxKgukxSbGcJFjXBeJ47wcBatbYl&show_text=true&width=500" width="500" height="520" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Publication Facebook Vincent Henin 3"></iframe>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <!-- La bordure qui prend 100% de la largeur de l'écran -->
@@ -503,6 +514,35 @@
                     topMenuList.classList.toggle('hidden');
                 });
             }
+
+            const languageButtons = document.querySelectorAll('.lang-option');
+
+            const setActiveLanguage = (selectedLang) => {
+                languageButtons.forEach((button) => {
+                    const isSelected = button.dataset.lang === selectedLang;
+                    button.dataset.active = String(isSelected);
+                    button.setAttribute('aria-pressed', String(isSelected));
+                    if (isSelected) {
+                        button.setAttribute('aria-current', 'true');
+                        button.classList.add('bg-white', 'text-teal-alt-500', 'shadow-sm');
+                        button.classList.remove('text-white/80');
+                    } else {
+                        button.removeAttribute('aria-current');
+                        button.classList.remove('bg-white', 'text-teal-alt-500', 'shadow-sm');
+                        button.classList.add('text-white/80');
+                    }
+                });
+
+                document.documentElement.lang = selectedLang;
+            };
+
+            setActiveLanguage('fr');
+
+            languageButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    setActiveLanguage(button.dataset.lang || 'fr');
+                });
+            });
 
             const biographyToggles = document.querySelectorAll('[data-bio-toggle]');
 
