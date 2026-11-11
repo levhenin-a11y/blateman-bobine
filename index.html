@@ -3,17 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blateman & Bobine - la BD des Super-Zéros</title>
+        <title data-i18n="title">Blateman & Bobine - la BD des Super-Zéros</title>
         <link rel="stylesheet" href="./css/style.css">
+        <style>
+            /* Style par défaut des boutons / à mettre plus tard dans css externe */
+            .lang-btn {
+            padding: 5px 10px;
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid #ccc;
+            }
+            /* Style ajouté automatiquement sur la langue active */
+            .lang-btn.active {
+            background: #007bff;
+            color: white;
+            font-weight: bold;
+            border-color: #007bff;
+            }
+            </style>
     </head>
     <body class="bg-white-200 w-full">
         <header>
             <div class="header-container mb-8">
-                <h1 class="text-6xl font-bold hidden">Blateman & Bobine - la BD des Super-Zéros</h1>
-                <a href="#" title="Back to Home"><img src="./img/logo-site.png" alt="Blateman & Bobine Logo" class="header-logo-image w-64 h-64 mx-auto block"></a>
+                <h1 class="text-6xl font-bold hidden" data-i18n="title_general">Blateman & Bobine - la BD des Super-Zéros</h1>
+                <a href="#" title="Retour à l'accueil" data-i18n-title="back_to_home"><span class="sr-only" data-i18n="home">Accueil</span><img src="./img/logo-site.png" alt="Logo officiel de Blateman & Bobine" class="header-logo-image w-64 h-64 mx-auto block" data-i18n-alt="blateman_bobine_logo_alt"></a>
             </div>
             <div class="social-media">
-                <h2 class="text-4xl font-extrabold mb-4 hidden">Social Media</h2>
+                <h2 class="text-4xl font-extrabold mb-4 hidden" data-i18n="social_media_title">Réseaux sociaux</h2>
                 <div class="social-icons flex space-x-4 mb-4 mx-auto justify-center">
                     <!---- TWITTER ICON  --->
                     <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
@@ -71,7 +87,7 @@
                     <div class="top-menu-links flex items-center justify-between gap-3 md:gap-6 p-4">
                         <div class="top-menu-toggle-wrapper flex items-center md:hidden">
                              <button id="top-menu-toggle" type="button" class="inline-flex items-center gap-2 rounded border border-white px-3 py-2 text-white" aria-controls="top-menu-list" aria-expanded="false">
-                                <span class="hidden">Menu</span>
+                                <span class="hidden" data-i18n="menu">Menu</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
                                 </svg>
@@ -79,29 +95,31 @@
                         </div>
                         <ul id="top-menu-list" class="hidden w-full flex-col pt-4 text-center md:flex md:w-auto md:flex-1 md:flex-row md:items-center md:justify-center md:space-x-6 md:pt-0 md:space-y-0">
                             <li>
-                                <a href="#news">News</a>
+                                <a href="#news" data-i18n="news">News</a>
                             </li>
                             <li>
-                                <a href="#personnages">Les Personnages</a>
+                                <a href="#personnages" data-i18n="characters">Les Personnages</a>
                             </li>
                             <li>
-                                <a href="#serie">La Série</a>
+                                <a href="#serie" data-i18n="series">La Série</a>
                             </li>
                             <li>
-                                <a href="#albums">Les Albums</a>
+                                <a href="#albums" data-i18n="albums">Les Albums</a>
                             </li>
                             <li>
-                                <a href="#auteurs">Les Auteurs</a>
+                                <a href="#auteurs" data-i18n="authors">Les Auteurs</a>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <a href="#contact" data-i18n="contact">Contact</a>
                             </li>
                             <li>
-                                <a href="#goodies">Goodies</a>
+                                <a href="#goodies" data-i18n="goodies">Goodies</a>
                             </li>
                         </ul>
                     </div>
                     <div class="language-switch ml-auto mr-4 flex shrink-0 items-center gap-1 rounded-full border border-white/30 bg-white/5 p-1 text-xs font-semibold uppercase tracking-[0.12em] text-white/80 md:text-[0.7rem]" aria-label="Choix de langue">
+                        <!-- Boutons de langue avec l'attribut data-lang -->
+                        <!-- Le bouton actif aura data-active="true" -->
                         <button type="button" class="lang-option rounded-full px-2.5 py-1.5 transition-all duration-200 hover:bg-white/10 data-[active=true]:bg-white data-[active=true]:text-teal-alt-500 data-[active=true]:shadow-sm" data-lang="fr" aria-pressed="true" aria-current="true" data-active="true">
                                 FR
                         </button>
@@ -117,22 +135,22 @@
         </header>
         <!--START of NEWS-->
         <section id="news" class="container mx-auto p-8 pb-32 mt-14 relative">
-            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">News</h2>
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4" data-i18n="news">News</h2>
             <div class="facebook-posts-container">
                 <div class="facebook-posts-grid grid grid-cols-1 gap-4 md:grid-cols-3">
                     <div class="facebook-posts-item facebook-post-item-first">
                         <div class="facebook-post-frame">
-                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid05CqzChrvTPqfqAhXai4Q9mzQ5RvHK2N98BqgijqpSRtqjCvum25CafeRgyBFXo8el&show_text=true&width=500" width="500" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Publication Facebook Vincent Henin 1"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid05CqzChrvTPqfqAhXai4Q9mzQ5RvHK2N98BqgijqpSRtqjCvum25CafeRgyBFXo8el&show_text=true&width=500" width="500" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Publication Facebook Vincent Henin" data-i18n-title="facebook_post"></iframe>
                         </div>
                     </div>
                     <!--<div class="facebook-posts-item facebook-post-item-second">
                         <div class="facebook-post-frame">
-                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid0Cbiok3ro7ZpcKLoE72uKa74sWHVDXPQpLcCNAvqaHvLh68rkSJgYLSUpyPJTf5TTl&show_text=true&width=500" width="500" height="539" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid0Cbiok3ro7ZpcKLoE72uKa74sWHVDXPQpLcCNAvqaHvLh68rkSJgYLSUpyPJTf5TTl&show_text=true&width=500" width="500" height="539" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Publication Facebook Vincent Henin" data-i18n-title="facebook_post"></iframe>
                         </div>
                     </div>-->
                     <!--<div class="facebook-post-item facebook-post-item-third">
                         <div class="facebook-post-frame">
-                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid02pCf6WdyUBZn36qfGmrgAUeyAjAqRW6FWhYERekxKgukxSbGcJFjXBeJ47wcBatbYl&show_text=true&width=500" width="500" height="520" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Publication Facebook Vincent Henin 3"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid02pCf6WdyUBZn36qfGmrgAUeyAjAqRW6FWhYERekxKgukxSbGcJFjXBeJ47wcBatbYl&show_text=true&width=500" width="500" height="520" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Publication Facebook Vincent Henin" data-i18n-title="facebook_post"></iframe>
                         </div>
                     </div>-->
                 </div>
@@ -143,16 +161,16 @@
         <!--END of NEWS-->
         <!--START of PERSONNAGES-->
         <section id="personnages" class="container mx-auto p-8 pb-32 mt-14 relative">
-            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Les Personnages</h2>
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4" data-i18n="characters">Les Personnages</h2>
             <!--START of INTRODUCTION DES PERSONNAGES et TESTIMONIALS-->
             <div class="personnages-introduction">
-                <div class="personnages-introduction-hello mb-4">
+                <div class="personnages-introduction-hello mb-4" data-i18n="characters_introduction">
                     Hello,I’m Blateman! Je suis le cousin de Batman. Le vrai. Ce dernier a fait bien des efforts pour cacher mon existence! Mais en vain, grâce au dessinateur Vhenin et au scénariste Tarek, je sors de l’ombre… pour le meilleur et pour le rire! Suis mes aventures, tu ne le regretteras pas…
-</div>                 
+                </div>                 
                 <!-- END of personnages-introduction-hello -->
-                <div class="personnages-introduction-testimony text-white-100 mb-4 bg-teal-500 p-4 rounded">
-                    "Blateman est un personnage hilarant et unique. Ses aventures sont toujours pleines de surprises et de rires. Je recommande vivement de suivre ses péripéties!" - Un fan enthousiaste
-</div>                 
+                <div class="personnages-introduction-testimony text-white-100 mb-4 bg-teal-500 p-4 rounded" data-i18n="characters_testimony">
+                    Blateman est un personnage hilarant et unique. Ses aventures sont toujours pleines de surprises et de rires. Je recommande vivement de suivre ses péripéties! - Un fan enthousiaste
+                </div>                 
                 <!-- END of personnages-introduction-testimony -->
             </div>
             <!--END of INTRODUCTION DES PERSONNAGES et TESTIMONIALS-->
@@ -161,18 +179,18 @@
                 <!--BLOCK 1 BLATEMAN-->
                 <div class="personnages-presentation-block--1">
                     <div class="personnages-presentation-title">
-                        <h3 class="personnages-presentation-heading text-2xl font-bold text-teal-alt-500">Blateman</h3>
+                        <h3 class="personnages-presentation-heading text-2xl font-bold text-teal-alt-500" data-i18n="goodie_1_title">Blateman</h3>
                         <img class="h-48 w-48" src="img/cercle-persos.png" alt="Blateman">
                     </div>
                     <div class="personnages-presentation-signaletique">
-                        <h4 class="text-lg font-bold text-teal-alt-400">Fiche Signalétique</h4>
+                        <h4 class="text-lg font-bold text-teal-alt-400" data-i18n="characters_signaletic">Fiche Signalétique</h4>
                         <ul>
                             <li>Cousin de Batman</li>
                             <li>Héros comique</li>
                             <li>Aventures hilarantes</li>
                         </ul>
                     </div>
-                    <div class="personnages-presentation-description">
+                    <div class="personnages-presentation-description" data-i18n="characters_description-blateman">
                         <p>Blateman est à l’aventure ce que Batman est à la chauve-souris… Euh, comprenez-y ce que vous voudrez. Blateman est un super-héros qui flirte souvent avec le super-zéro! Malgré ses pouvoirs extraordinaires et les tours qu’il cache dans ses Blat-Sacoches, il doit souvent compter sur son assistant, Bobine, pour rattraper ses bévues. 
                             C’est qu’elle a 4 mains gauches, la pauvre blatte de compet’… </p>
                     </div>
@@ -185,14 +203,14 @@
                         <img class="h-48 w-48" src="img/cercle-persos.png" alt="Blateman">
                     </div>
                     <div class="personnages-presentation-signaletique">
-                        <h4 class="text-lg font-bold text-teal-alt-400">Fiche Signalétique</h4>
+                        <h4 class="text-lg font-bold text-teal-alt-400" data-i18n="characters_signaletic">Fiche Signalétique</h4>
                         <ul>
                             <li>Gamin aux dents jaunes</li>
                             <li>Nom civil : Bobine</li>
                             <li>Etc.</li>
                         </ul>
                     </div>
-                    <div class="personnages-presentation-description">
+                    <div class="personnages-presentation-description" data-i18n="characters_description-bobine">
                         <p>Bobine, lui, est un gamin aux cheveux jaunes et à la dentition imposante. Pas une belle gueule donc, pour une Bobine! Mais il est futé, parfois un brin roublard, et surtout débrouillard et perspicace.Sa motivation est sans bornes; c’est auprès de Blateman, son maître de stage, qu’il compte apprendre les ficelles du métier de super-héros… À moins que ce ne soit le contraire, Bobine qui apprend à Blateman ?! Le disciple peut parfois dépasser le maître ! 
                             Le tandem « B & B », c’est de la dynamite et c’est la combinaison parfaite pour vous faire vivre de folles aventures, rire et voyager, au gré de leurs péripéties hautes en couleur.  </p>
                     </div>
@@ -205,7 +223,7 @@
         <!--END of PERSONNAGES-->
         <!--START of SERIE-->
         <section id="serie" class="container mx-auto p-8 pb-32 mt-14 relative">
-            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">La Série</h2>
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4" data-i18n="series">La Série</h2>
             <div class="serie-intro">
                 <img class="serie-intro-img" src="http://pinegrow.com/placeholders/img19.jpg"/>
                 <div class="serie-intro-text">
@@ -232,7 +250,7 @@
         <!-- END of SERIE-->
         <!-- START of ALBUMS-->
         <section id="albums" class="container mx-auto p-8 pb-32 mt-14 relative">
-            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Les Albums</h2>
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4" data-i18n="albums">Les Albums</h2>
             <div class="albums-container grid grid-cols-1 gap-6 justify-items-center md:grid-cols-3 md:gap-8">
                 <div class="albums-cover flex flex-col items-center">
                     <a href="#"> <img class="albums-cover-img border-2 border-white-200 border-solid rounded-md shadow-sm" src="https://via.placeholder.com/210x279/orange/whitesmoke.jpg?text=Album+1+Zombie-Attack!"/> </a>
@@ -248,9 +266,9 @@
                 </div>
             </div>
             <div class="albums-order-container">
-                <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Commande</h2>
+                <h2 class="text-4xl font-extrabold text-teal-500 mb-4" data-i18n="order">Commande</h2>
                 <div class="albums-order-cta h-auto bg-teal-600 rounded-lg p-4">
-                    <h3 class="albums-order-cta-heading text-2xl font-bold text-white-100">Tu veux un album?</h3>
+                    <h3 class="albums-order-cta-heading text-2xl font-bold text-white-100" data-i18n="want_album">Tu veux un album?</h3>
                     <p class="albums-order-cta-text text-white">Rends-toi dans le section <a href="#" class="underline">Contact</a> et dis-nous le ou les albums que tu souhaites commander. On te répondra dans les plus brefs délais.<br><br>Et bien sûr, on t'envoie les albums commandés gratuitement.<br><br>Merci !</p>
                 </div>
             </div>
@@ -259,7 +277,7 @@
         <!-- END of ALBUMS -->
         <!-- START of AUTEURS-->
         <section id="auteurs" class="container mx-auto p-8 pb-32 mt-14 relative">
-            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Les Auteurs</h2>
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4" data-i18n="authors">Les Auteurs</h2>
             <div class="space-y-14 pt-6">
                 <article class="grid grid-cols-1 items-center gap-8 md:grid-cols-12 md:gap-10">
                     <div class="md:col-span-5">
@@ -295,7 +313,7 @@
         <!-- END of AUTEURS -->
         <!-- START of CONTACT-->
         <section id="contact" class="container mx-auto p-8 pb-32 mt-14 relative">
-            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Contact</h2>
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4" data-i18n="contact">Contact</h2>
             <div class="grid grid-cols-1 gap-8 pt-6 md:grid-cols-3 md:gap-10">
                 <article>
                     <h3 class="text-2xl font-bold text-teal-alt-500">Olivier Ghys</h3>
@@ -315,13 +333,13 @@
             </div>
             <div class="mt-10 rounded-[1.75rem] bg-teal-600 p-5 md:p-8">
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-12">
-                    <form class="md:col-span-8" action="#" method="post">
+                    <form id="contact-form" class="md:col-span-8" action="#" method="post">
                         <div class="space-y-5">
                             <div>
                                 <label for="contact-name" class="mb-2 block text-xl font-bold uppercase italic text-white">Nom et prénom 
                                     <span class="text-teal-alt-100" aria-hidden="true">*</span>
                                 </label>
-                                <input id="contact-name" name="name" type="text" required class="h-14 w-full border border-teal-100 px-3 text-xl text-teal-900 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50">
+                                <input id="contact-name" name="name" type="text" required class="h-14 w-full border border-teal-100 px-3 text-xl text-teal-900 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-teal-50" placeholder="Entrez vos nom et prénom" data-i18n-placeholder="names_placeholder">
                             </div>
                             <div>
                                 <label for="contact-email" class="mb-2 block text-xl font-bold uppercase italic text-white">Adresse mail 
@@ -339,6 +357,7 @@
                         <div class="mt-8 flex flex-wrap justify-end gap-4">
                             <button type="reset" class="min-w-32 rounded-lg border border-white px-6 py-3 text-2xl text-white transition hover:bg-white hover:text-teal-alt-500">Annuler</button>
                             <button type="submit" class="min-w-32 rounded-lg bg-white px-6 py-3 text-2xl text-teal-600 shadow-md transition hover:bg-white-100">Envoyer</button>
+                            <p id="form-feedback"></p>
                         </div>
                     </form>
                     <div class="hidden items-center justify-center md:col-span-4 md:flex">
@@ -355,27 +374,27 @@
         <!-- END of CONTACT -->
         <!-- START of GOODIES-->
         <section id="goodies" class="container mx-auto p-8 pb-32 mt-14 relative">
-            <h2 class="text-4xl font-extrabold text-teal-500 mb-4">Goodies</h2>
-            <h3 class="text-2xl font-bold text-teal-alt-500">Goodies Item 1</h3>
+            <h2 class="text-4xl font-extrabold text-teal-500 mb-4" data-i18n="goodies">Goodies</h2>
+            <h3 class="text-2xl font-bold text-teal-alt-500" data-i18n="goodie_1_title">Goodies Article 1</h3>
             <div class="goodies-container flex gap-2.5 justify-start flex-col md:flex-row">
                 <div class="goodies-item flex flex-col items-center">
                     <figure class="flex flex-col items-center">
-                        <img src="./img/cercle-persos.png" alt="Goodie 1" class="goodies-image h-60 w-full object-cover rounded-lg">
+                        <img src="./img/cercle-persos.png" alt="Goodie 1" class="goodies-image h-60 w-full object-cover rounded-lg" data-i18n-alt="goodie_1_item_1_img_alt">
                         <figcaption class="">Description of Goodie 1.</figcaption>
                     </figure>
                 </div>
                 <figure class="flex flex-col items-center">
-                    <img src="http://pinegrow.com/placeholders/img19.jpg" alt="Goodie 2" class="goodies-image h-60 w-full object-cover rounded-lg">
+                    <img src="http://pinegrow.com/placeholders/img19.jpg" alt="Goodie 2" class="goodies-image h-60 w-full object-cover rounded-lg" data-i18n-alt="goodie_1_item_2_img_alt">
                     <figcaption class="">Description of Goodie 2.</figcaption>
                 </figure>
                 <div class="goodies-item flex flex-col items-center">
                     <figure class="flex flex-col items-center">
-                        <img src="http://pinegrow.com/placeholders/img11.jpg" alt="Goodie 3" class="goodies-image h-60 w-full object-cover rounded-lg">
+                        <img src="http://pinegrow.com/placeholders/img11.jpg" alt="Goodie 3" class="goodies-image h-60 w-full object-cover rounded-lg" data-i18n-alt="goodie_1_item_3_img_alt">
                         <figcaption class="">Description of Goodie 3.</figcaption>
                     </figure>
                 </div>
             </div>
-            <h3 class="text-2xl font-bold text-teal-alt-500">Goodies Item 2</h3>
+            <h3 class="text-2xl font-bold text-teal-alt-500" data-i18n="goodie_2_title">Goodies Item 2</h3>
             <div class="goodies-container flex gap-1.5 justify-start flex-col md:flex-row">
                 <div class="goodies-item flex flex-col items-center">
                     <figure class="flex flex-col items-center">
@@ -409,36 +428,36 @@
         <footer class="footer bg-teal-alt-500 text-white py-4 md:px-6">
             <div class="footer-container flex flex-col md:flex-row gap-4 items-center text-center md:justify-around">
                 <div class="footer-logo">
-                    <h1 class="text-6xl font-bold hidden">Blateman & Bobine - la BD des Super-Zéros</h1>
-                    <a href="#" title="Back to Home"><img src="./img/logo-site.png" alt="Blateman & Bobine Logo" class="footer-logo-image w-32 h-32 mx-auto block"></a>
+                    <h1 class="text-6xl font-bold hidden" data-i18n="title">Blateman & Bobine - la BD des Super-Zéros</h1>
+                    <a href="#" title="Back to Home" data-i18n-title="back_to_home"><img src="./img/logo-site.png" alt="Blateman & Bobine Logo" class="footer-logo-image w-32 h-32 mx-auto block" data-i18n-alt="blateman_bobine_logo_alt"></a>
                 </div>
                 <div class="footer-links">
                     <ul id="footer-links-items" class="flex flex-col md:flex-row gap-4 mb-6 md:mb-0 md:space-x-6">
                         <li>
-                            <a href="#news">News</a>
+                            <a href="#news" data-i18n="news">News</a>
                         </li>
                         <li>
-                            <a href="#personnages">Les Personnages</a>
+                            <a href="#personnages" data-i18n="characters">Les Personnages</a>
                         </li>
                         <li>
-                            <a href="#serie">La Série</a>
+                            <a href="#serie" data-i18n="series">La Série</a>
                         </li>
                         <li>
-                            <a href="#albums">Les Albums</a>
+                            <a href="#albums" data-i18n="albums">Les Albums</a>
                         </li>
                         <li>
-                            <a href="#auteurs">Les Auteurs</a>
+                            <a href="#auteurs" data-i18n="authors">Les Auteurs</a>
                         </li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a href="#contact" data-i18n="contact">Contact</a>
                         </li>
                         <li>
-                            <a href="#goodies">Goodies</a>
+                            <a href="#goodies" data-i18n="goodies">Goodies</a>
                         </li>
                     </ul>
                 </div>
                 <div class="footer-social-media">
-                    <h2 class="text-4xl font-extrabold mb-4 hidden">Social Media</h2>
+                    <h2 class="text-4xl font-extrabold mb-4 hidden" data-i18n="social_media_title">Social Media</h2>
                     <div class="footer-social-icons flex space-x-4 mb-6 mx-auto justify-center">
                         <!---- TWITTER ICON  --->
                         <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
@@ -496,6 +515,10 @@
             <div class="copyright text-center text-sm">Copyright © Vhenin - Blateman & Bobine 2024-</div>
         </footer>
         <!-- END of GOODIES-->
+        <!-- BEGIN of SCRIPTS -->
+        <!--i18n multilingual detection-->
+        <script src="script-multilanguage.js"></script>
+        <!-- automatic copyright year update -->
         <script>
             const copyrightElement = document.querySelector('.copyright');
 
@@ -536,11 +559,17 @@
                 document.documentElement.lang = selectedLang;
             };
 
-            setActiveLanguage('fr');
+            const preferredLanguage = localStorage.getItem('preferredLang') || document.documentElement.lang || 'fr';
+            setActiveLanguage(preferredLanguage);
 
             languageButtons.forEach((button) => {
                 button.addEventListener('click', () => {
-                    setActiveLanguage(button.dataset.lang || 'fr');
+                    const selectedLang = button.dataset.lang || 'fr';
+                    setActiveLanguage(selectedLang);
+
+                    if (typeof changeLanguage === 'function') {
+                        changeLanguage(selectedLang);
+                    }
                 });
             });
 
@@ -578,5 +607,6 @@
                 });
             });
         </script>
+        <!-- END of SCRIPTS -->
     </body>
 </html>

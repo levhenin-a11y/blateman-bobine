@@ -1,0 +1,47 @@
+{
+    "header": {
+        "logo": {
+            "blateman_bobine_logo_alt": "Logo offciel de Blateman & Bobine",
+            "home": "Accueil"
+        },
+        "social_media":{
+            "social_media_title": "Réseaux Sociaux"
+        },
+        "heading1": {
+            "title_general": "Blateman & Bobine - la BD des Super-Zéros"
+        },
+        "nav_and_heading2": {
+            "menu": "Menu",
+            "news": "News",
+            "characters": "Les Personnages",
+            "series": "La Série",
+            "albums": "Les Albums",
+            "authors": "Les Auteurs",
+            "contact": "Contact",
+            "goodies": "Goodies",
+            "order": "Commande"
+            },
+        "heading3": {
+            "want_album": "Tu veux un album?",
+            "goodie_1_title": "Goodies Article 1",
+            "goodie_2_title": "Goodies Article 2",
+            "goodie_3_title": "Goodies Article 3"
+        },
+        "heading4": {
+            "characters_signaletic": "Fiche Signalétique"
+        },
+        "a_title": {
+            "back_to_home": "Retour à l'accueil",
+            "home": "Accueil"
+        },
+        "facebook": {
+            "facebook_post": "Publication depuis Facebook Vincent Henin - Vhenin"
+        },
+        "characters": {
+            "characters_introduction": "Hello,I’m Blateman! Je suis le cousin de Batman. Le vrai. Ce dernier a fait bien des efforts pour cacher mon existence! Mais en vain, grâce au dessinateur Vhenin et au scénariste Tarek, je sors de l’ombre… pour le meilleur et pour le rire! Suis mes aventures, tu ne le regretteras pas…",
+            "characters_testimony": "Blateman est un personnage hilarant et unique. Ses aventures sont toujours pleines de surprises et de rires. Je recommande vivement de suivre ses péripéties! - Un fan enthousiaste",
+            "characters_description-bobine": "Bobine, lui, est un gamin aux cheveux jaunes et à la dentition imposante. Pas une belle gueule donc, pour une Bobine! Mais il est futé, parfois un brin roublard, et surtout débrouillard et perspicace.Sa motivation est sans bornes; c’est auprès de Blateman, son maître de stage, qu’il compte apprendre les ficelles du métier de super-héros… À moins que ce ne soit le contraire, Bobine qui apprend à Blateman ?! Le disciple peut parfois dépasser le maître ! Le tandem « B & B », c’est de la dynamite et c’est la combinaison parfaite pour vous faire vivre de folles aventures, rire et voyager, au gré de leurs péripéties hautes en couleur.",
+            "characters_description-blateman": "Blateman est à l’aventure ce que Batman est à la chauve-souris… Euh, comprenez-y ce que vous voudrez. Blateman est un super-héros qui flirte souvent avec le super-zéro! Malgré ses pouvoirs extraordinaires et les tours qu’il cache dans ses Blat-Sacoches, il doit souvent compter sur son assistant, Bobine, pour rattraper ses bévues. C’est qu’elle a 4 mains gauches, la pauvre blatte de compet’…"
+        }
+    }
+}
