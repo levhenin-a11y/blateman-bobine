@@ -12,7 +12,7 @@
         },
         "nav_and_heading2": {
             "menu": "Menu",
-            "news": "News",
+            "news": "Niouzz",
             "characters": "Les Personnages",
             "series": "La Série",
             "albums": "Les Albums",
@@ -20,7 +20,7 @@
             "contact": "Contact",
             "goodies": "Goodies",
             "order": "Commande"
-            },
+        },
         "heading3": {
             "want_album": "Tu veux un album?",
             "goodie_1_title": "Goodies Article 1",

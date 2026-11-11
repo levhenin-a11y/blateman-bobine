@@ -3,24 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title data-i18n="title">Blateman & Bobine - la BD des Super-Zéros</title>
+        <title data-i18n="title_general">Blateman & Bobine - la BD des Super-Zéros</title>
         <link rel="stylesheet" href="./css/style.css">
-        <style>
-            /* Style par défaut des boutons / à mettre plus tard dans css externe */
-            .lang-btn {
-            padding: 5px 10px;
-            cursor: pointer;
-            background: transparent;
-            border: 1px solid #ccc;
-            }
-            /* Style ajouté automatiquement sur la langue active */
-            .lang-btn.active {
-            background: #007bff;
-            color: white;
-            font-weight: bold;
-            border-color: #007bff;
-            }
-            </style>
+     
     </head>
     <body class="bg-white-200 w-full">
         <header>
@@ -82,18 +67,20 @@
                 <!-- END of SOCIAL ICONS -->
             </div>
             <div>
-                <nav id="top-menu" class="bg-teal-alt-500 text-white mb-8 p-4 px-0 flex items-center npm">
-                    
-                    <div class="top-menu-links flex items-center justify-between gap-3 md:gap-6 p-4">
-                        <div class="top-menu-toggle-wrapper flex items-center md:hidden">
-                             <button id="top-menu-toggle" type="button" class="inline-flex items-center gap-2 rounded border border-white px-3 py-2 text-white" aria-controls="top-menu-list" aria-expanded="false">
+                <nav id="top-menu" class="relative mb-8 flex h-16 justify-center bg-teal-alt-500 px-0 py-4 text-white md:h-22">
+                    <div class="top-menu-links flex w-full items-center justify-center gap-3 px-4 md:gap-6">
+                        <div class="top-menu-toggle-wrapper absolute left-4 top-4 z-50 flex items-center md:hidden">
+                            <button id="top-menu-toggle" type="button" class="inline-flex items-center justify-center rounded border border-white p-2 text-white transition-colors duration-200 hover:bg-white/10" aria-controls="top-menu-list" aria-expanded="false" aria-label="Ouvrir le menu">
                                 <span class="hidden" data-i18n="menu">Menu</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <svg class="menu-icon-open h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                                </svg>
+                                <svg class="menu-icon-close hidden h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18"/>
                                 </svg>
                             </button>
                         </div>
-                        <ul id="top-menu-list" class="hidden w-full flex-col pt-4 text-center md:flex md:w-auto md:flex-1 md:flex-row md:items-center md:justify-center md:space-x-6 md:pt-0 md:space-y-0">
+                        <ul id="top-menu-list" class="mt-12 hidden w-full flex-col pt-4 text-center md:mt-0 md:flex md:w-auto md:flex-row md:items-center md:justify-center md:space-x-6 md:pt-0 md:space-y-0">
                             <li>
                                 <a href="#news" data-i18n="news">News</a>
                             </li>
@@ -117,7 +104,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="language-switch ml-auto mr-4 flex shrink-0 items-center gap-1 rounded-full border border-white/30 bg-white/5 p-1 text-xs font-semibold uppercase tracking-[0.12em] text-white/80 md:text-[0.7rem]" aria-label="Choix de langue">
+                    <div class="language-switch absolute right-6 top-3 z-50 flex shrink-0 items-center gap-2 rounded-full border border-white/30 bg-white/5 p-1 text-xs font-semibold uppercase tracking-[0.12em] text-white/80 md:top-1/2 md:-translate-y-1/2 md:text-[0.7rem]" aria-label="Choix de langue">
                         <!-- Boutons de langue avec l'attribut data-lang -->
                         <!-- Le bouton actif aura data-active="true" -->
                         <button type="button" class="lang-option rounded-full px-2.5 py-1.5 transition-all duration-200 hover:bg-white/10 data-[active=true]:bg-white data-[active=true]:text-teal-alt-500 data-[active=true]:shadow-sm" data-lang="fr" aria-pressed="true" aria-current="true" data-active="true">
@@ -138,11 +125,11 @@
             <h2 class="text-4xl font-extrabold text-teal-500 mb-4" data-i18n="news">News</h2>
             <div class="facebook-posts-container">
                 <div class="facebook-posts-grid grid grid-cols-1 gap-4 md:grid-cols-3">
-                    <div class="facebook-posts-item facebook-post-item-first">
+                    <!--<div class="facebook-posts-item facebook-post-item-first">
                         <div class="facebook-post-frame">
                             <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid05CqzChrvTPqfqAhXai4Q9mzQ5RvHK2N98BqgijqpSRtqjCvum25CafeRgyBFXo8el&show_text=true&width=500" width="500" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Publication Facebook Vincent Henin" data-i18n-title="facebook_post"></iframe>
                         </div>
-                    </div>
+                    </div>-->
                     <!--<div class="facebook-posts-item facebook-post-item-second">
                         <div class="facebook-post-frame">
                             <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvincenthenin.comixillustration%2Fposts%2Fpfbid0Cbiok3ro7ZpcKLoE72uKa74sWHVDXPQpLcCNAvqaHvLh68rkSJgYLSUpyPJTf5TTl&show_text=true&width=500" width="500" height="539" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Publication Facebook Vincent Henin" data-i18n-title="facebook_post"></iframe>
@@ -515,6 +502,120 @@
             <div class="copyright text-center text-sm">Copyright © Vhenin - Blateman & Bobine 2024-</div>
         </footer>
         <!-- END of GOODIES-->
+        <style>
+            @media (max-width: 767px) {
+                #top-menu {
+                    transition: background-color 0.32s ease, opacity 0.32s ease, transform 0.32s ease;
+                }
+
+                #top-menu.is-open {
+                    position: fixed;
+                    inset: 0;
+                    z-index: 50;
+                    height: 100vh;
+                    margin: 0;
+                    background-color: rgba(29, 95, 147, 0.65); /* correspond à --color-teal-alt-600 */
+                    background-image: linear-gradient(
+                        135deg,
+                        rgba(29, 95, 147, 0.65), /* correspond à --color-teal-alt-600 */
+                        rgba(83, 143, 191, 0.7) /* correspond à --color-teal-alt-400 */
+                    );
+                    border: 1px solid rgba(255, 255, 255, 0.18);
+                    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 24px 80px rgba(5, 28, 30, 0.45);
+                    backdrop-filter: blur(14px);
+                    -webkit-backdrop-filter: blur(14px);
+                    opacity: 1;
+                    transform: scale(1);
+                }
+
+                #top-menu:not(.is-open) {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+
+                #top-menu.is-open .top-menu-links {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                #top-menu.is-open #top-menu-list {
+                    position: absolute;
+                    inset: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                    gap: 1.5rem;
+                    font-size: 1.5rem;
+                    line-height: 1.2;
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                    transition: opacity 0.28s ease, transform 0.28s ease;
+                }
+
+                #top-menu:not(.is-open) #top-menu-list {
+                    opacity: 0;
+                    transform: translateY(12px) scale(0.98);
+                }
+
+                #top-menu.is-open #top-menu-list li {
+                    list-style: none;
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: opacity 0.22s ease, transform 0.22s ease;
+                }
+
+                #top-menu.is-open #top-menu-list li:nth-child(1) { transition-delay: 0.02s; }
+                #top-menu.is-open #top-menu-list li:nth-child(2) { transition-delay: 0.06s; }
+                #top-menu.is-open #top-menu-list li:nth-child(3) { transition-delay: 0.1s; }
+                #top-menu.is-open #top-menu-list li:nth-child(4) { transition-delay: 0.14s; }
+                #top-menu.is-open #top-menu-list li:nth-child(5) { transition-delay: 0.18s; }
+                #top-menu.is-open #top-menu-list li:nth-child(6) { transition-delay: 0.22s; }
+                #top-menu.is-open #top-menu-list li:nth-child(7) { transition-delay: 0.26s; }
+
+                #top-menu.is-open #top-menu-list a {
+                    display: inline-block;
+                    padding: 0.25rem 0.6rem;
+                    border-radius: 9999px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+                    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+                }
+
+                #top-menu.is-open #top-menu-list a:hover,
+                #top-menu.is-open #top-menu-list a:focus-visible {
+                    background: rgba(255, 255, 255, 0.12);
+                    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 10px 24px rgba(0, 0, 0, 0.16);
+                    transform: translateY(-1px);
+                }
+
+                .menu-icon-open,
+                .menu-icon-close {
+                    transition: transform 0.25s ease, opacity 0.25s ease;
+                }
+
+                #top-menu.is-open .menu-icon-open {
+                    display: none;
+                }
+
+                #top-menu.is-open .menu-icon-close {
+                    display: block;
+                    transform: rotate(180deg) scale(1.06);
+                }
+
+                #top-menu-toggle {
+                    background: rgba(255, 255, 255, 0.06);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+                    backdrop-filter: blur(8px);
+                    -webkit-backdrop-filter: blur(8px);
+                }
+            }
+        </style>
         <!-- BEGIN of SCRIPTS -->
         <!--i18n multilingual detection-->
         <script src="script-multilanguage.js"></script>
@@ -527,16 +628,88 @@
                 copyrightElement.textContent = `${baseText}${new Date().getFullYear()}`;
             }
 
+            const topMenu = document.getElementById('top-menu');
             const topMenuToggle = document.getElementById('top-menu-toggle');
             const topMenuList = document.getElementById('top-menu-list');
+            const menuOpenIcon = document.querySelector('.menu-icon-open');
+            const menuCloseIcon = document.querySelector('.menu-icon-close');
+
+            const closeMobileMenu = () => {
+                if (!topMenuToggle || !topMenuList) {
+                    return;
+                }
+
+                topMenuToggle.setAttribute('aria-expanded', 'false');
+                topMenuToggle.setAttribute('aria-label', 'Ouvrir le menu');
+                topMenuList.classList.add('hidden');
+
+                if (topMenu) {
+                    topMenu.classList.remove('is-open');
+                }
+
+                if (document.body) {
+                    document.body.classList.remove('overflow-hidden');
+                }
+
+                if (menuOpenIcon) {
+                    menuOpenIcon.classList.remove('hidden');
+                }
+
+                if (menuCloseIcon) {
+                    menuCloseIcon.classList.add('hidden');
+                }
+            };
+
+            const openMobileMenu = () => {
+                if (!topMenuToggle || !topMenuList) {
+                    return;
+                }
+
+                topMenuToggle.setAttribute('aria-expanded', 'true');
+                topMenuToggle.setAttribute('aria-label', 'Fermer le menu');
+                topMenuList.classList.remove('hidden');
+
+                if (topMenu) {
+                    topMenu.classList.add('is-open');
+                }
+
+                if (document.body) {
+                    document.body.classList.add('overflow-hidden');
+                }
+
+                if (menuOpenIcon) {
+                    menuOpenIcon.classList.add('hidden');
+                }
+
+                if (menuCloseIcon) {
+                    menuCloseIcon.classList.remove('hidden');
+                }
+            };
 
             if (topMenuToggle && topMenuList) {
                 topMenuToggle.addEventListener('click', () => {
                     const isExpanded = topMenuToggle.getAttribute('aria-expanded') === 'true';
-                    topMenuToggle.setAttribute('aria-expanded', String(!isExpanded));
-                    topMenuList.classList.toggle('hidden');
+                    if (isExpanded) {
+                        closeMobileMenu();
+                    } else {
+                        openMobileMenu();
+                    }
+                });
+
+                topMenuList.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth < 768) {
+                            closeMobileMenu();
+                        }
+                    });
                 });
             }
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    closeMobileMenu();
+                }
+            });
 
             const languageButtons = document.querySelectorAll('.lang-option');
 
